@@ -1,11 +1,41 @@
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    td {
+        background: grey;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        font-size: 70px;
+    }
+</style>
 <table>
     <tr>
-        <td>X</td><td>O</td><td>X</td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
     </tr>
     <tr>
-        <td>X</td><td>O</td><td>X</td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
     </tr>
     <tr>
-        <td>X</td><td>O</td><td>X</td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
     </tr>
 </table>
+<script>
+    var simbolo = "X"
+    function marcar(td) {
+        td.innerHTML = simbolo
+        if (simbolo == "X") {
+            simbolo = "O"
+        } else {
+            simbolo = "X"
+        }
+    }
+</script>
